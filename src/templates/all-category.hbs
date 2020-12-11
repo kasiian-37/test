@@ -1,0 +1,48 @@
+{{#each this}}
+<div class="categories-group">
+    <!-- моя категория -->
+    <div class="categories">
+        <div class="categories-title">
+            <a class="icon-left">
+                <svg class="icon-left-svg" width="30" height="30">
+                    <use href="./images/sprite.svg#icon-elem-left"></use>
+                </svg></a>
+            <h2 class="section-title">{{categories}}</h2>
+            <a class="section-text" href="">Дивитися всі</a>
+            <a class="icon-right">
+                <svg class="icon-right-svg" width="30" height="30">
+                    <use href="./images/sprite.svg#icon-elem-right"></use>
+                </svg></a>
+        </div>
+        <ul class="product-card-group">
+            {{!-- {{#each this}} --}}
+            <li class="product-card">
+                <div class="product-image">
+                    <img class="product-img" src={{productImgUrl}} alt="" />
+                    <div class="product-overlay">
+                        <button class="product-card-icon product-card-icon-favorite">
+                            <svg class="icon" width="16" height="16">
+                                <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card-icon product-card-icon-fullscreen">
+                            <svg class="icon" width="16" height="16">
+                                <use href={{"./images/sprite.svg#icon-fullscreen-icon"}}></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">{{this.productName}}</h3>
+                    <p class="product-price">{{productPriceSale}} грн</p>
+                </div>
+            </li>
+            {{!-- {{/each}} --}}
+        </ul>
+        {{!-- {{>./cardset/product-cards.hbs }} --}}
+        {{!-- {{>./product-cards.hbs }} --}}
+
+    </div>
+</div>
+
+{{/each}}
