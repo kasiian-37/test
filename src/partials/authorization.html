@@ -1,0 +1,26 @@
+<!-- Модалка авторизации -->
+<div class="modal-backdrop is-hidden" data-modal>
+    <div class="auth-modal">
+        <button class="auth-close-button" data-modal-close>
+            <svg class="auth-close-icon" width="24px" height="24px">
+                <use href="./images/sprite.svg#icon-close_icon"></use>
+            </svg>
+        </button>
+        <p class="auth-modal-title">Ви можете авторизуватися за допомогою Googlt Account:</p>
+        <button class="google-auth">
+            <svg class="google-auth-icon" width="18px" height="18px">
+                <use href="./images/sprite.svg#icon-google-icon"></use>
+            </svg>
+            <p class="google-auth-title">Google</p>
+        </button>
+        <h2 class="auth-modal-title">Або зайти за допомогою імейлу і пароля, попередньо зареєструвавшись:</h2>
+        <form method="post" class="auth-form">
+            <input type="email" name="email" class="auth-input email" id="userEmail" placeholder="E-mail">
+            <input type="password" name="password" class="auth-input password" id="userPassword" placeholder="Password">
+            <div class="auth-buttons">
+                <button type="submit" class="button-orange">Увійти</button>
+                <button type="submit" class="button-gray">Зареєструватись</button>
+            </div>
+        </form>
+    </div>
+</div>
