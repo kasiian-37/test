@@ -1,0 +1,20 @@
+.product-category {
+  @media screen and (min-width: 1281px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.product-category-item {
+  margin-bottom: 54px;
+  font-family: Roboto;
+  font-style: Bold;
+  font-size: 14px;
+  line-height: 16px;
+  line-height: 100%;
+  vertical-align: Top;
+  letter-spacing: 2%;
+  fill: Solid #000000;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

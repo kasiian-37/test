@@ -1,0 +1,54 @@
+.delete-ad {
+display: flex;
+margin-bottom: 30px;
+
+&-icon {
+margin-right: 10px;
+}
+}
+
+.button-save-cancel {
+display: flex;
+justify-content: space-between;
+}
+
+.edit-ad-save {
+background-color: $accent-orange;
+color: $white-text;
+border: none;
+}
+.edit-ad-cancel {
+background-color: $white-text;
+border-color: $modal-text;
+}
+
+@media screen and (max-width: $before-tablet) {
+.edit-ad-save {
+padding: 20px 27px;
+}
+.edit-ad-cancel {
+padding: 20px 27px;
+}
+}
+@media screen and(min-width: $tablet) {
+.edit-ad-save {
+padding: 25px 50px;
+}
+.edit-ad-cancel {
+padding: 25px 50px;
+}
+.delete-ad {
+margin-left: 160px;
+}
+.button-save-cancel {
+margin-left: 160px;
+}
+}
+@media screen and(min-width: $desktop) {
+.delete-ad {
+margin-left: 210px;
+}
+.button-save-cancel {
+margin-left: 210px;
+}
+}

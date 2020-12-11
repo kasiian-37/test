@@ -1,0 +1,261 @@
+.section {
+  background-color: #e5e5e5;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  // border: solid 1px red;
+}
+
+.main-container {
+  // border: solid 1px blue;
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $mobile;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  // padding-bottom: 80px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.categories-group {
+  @media screen and (max-width: $before-tablet) {
+    overflow: hidden;
+    height: 1575px;
+  }
+}
+
+.categories {
+  @media screen and (max-width: $before-tablet) {
+    overflow: hidden;
+    height: 783px;
+  }
+  @media screen and (min-width: $tablet) {
+    overflow: hidden;
+    height: 500px;
+  }
+  @media screen and (min-width: $desktop) {
+    overflow: hidden;
+    height: 500px;
+  }
+}
+
+.categories-title {
+  display: flex;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  @media screen and (max-width: $before-tablet) {
+    min-width: 285px;
+  }
+  @media screen and (min-width: $tablet) {
+    max-width: 725px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1000px;
+  }
+
+  // border: rebeccapurple 1px solid;
+}
+
+.section-title {
+  font-size: 12px;
+  font-style: bold;
+  line-height: 1.21;
+  margin: 0px;
+  min-width: 160px;
+  // border: solid 1px rebeccapurple;
+}
+
+.section-text {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.21;
+
+  margin: 0px;
+  // margin-top: 10px;
+  margin-left: 15px;
+  color: $accent-orange;
+
+  min-width: 100px;
+  // border: solid 1px rebeccapurple;
+}
+
+.product-card-group {
+  .product-card {
+    list-style: none;
+  }
+
+  padding: 0px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.product-card-one-group {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+}
+
+.product-card__my {
+  list-style: none;
+
+  margin: 15px;
+  background: #ffffff;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+  // &:last-child {
+  //   margin-bottom: 0;
+  // }
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 8 * 15px) / 4);
+  }
+}
+.product-card__my:hover,
+.product-card__my:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.product-img__my {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.button-next-pages {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 1.17;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  padding: 20px;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 1px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.button-next-pages:hover,
+.button-next-pages:focus {
+  background-color: #000;
+  color: #fff;
+}
+
+.icon-add-position {
+  position: relative;
+}
+
+.icon-add {
+  left: 240px;
+  top: -1280px;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+
+  position: absolute;
+  --color1: $white-text;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: $accent-orange;
+}
+
+.icon-left,
+.icon-right {
+  --color2: #fff;
+  --color3: #000;
+  border-radius: 50%;
+}
+
+.icon-left:hover,
+.icon-left:focus,
+.icon-left:focus,
+.icon-right:hover {
+  --color2: #ff6b09;
+  --color3: #fff;
+}
+
+.icon-left,
+.icon-right {
+  @media screen and (max-width: $before-tablet) {
+    display: none;
+  }
+}
+
+.icon-right {
+  @media screen and (max-width: $before-mobile) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-left: 350px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 850px;
+  }
+}
+
+.icon-left {
+  @media screen and (max-width: $before-mobile) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-right: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 20px;
+  }
+}
+
+/* caruesel*/
+// .gallery {
+//   // width: 390px;
+//   overflow: hidden;
+// }
+
+.gallery ul {
+  // height: 130px;
+  // width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: margin-left 500ms;
+  /* удаляем пустое пространство между элементами li, у которых установлен inline-block */
+  /* http://davidwalsh.name/remove-whitespace-inline-block */
+  font-size: 0;
+}
+
+.gallery li {
+  display: inline-block;
+}
