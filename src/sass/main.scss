@@ -1,0 +1,22 @@
+// Base
+@import './base/normalize';
+@import './utils/variables';
+
+// Utils
+@import './utils/breakpoints';
+@import './base/html';
+//@import './utils/mixins';
+@import './utils/placeholder';
+//modal-window
+@import './components/modal-windows/search-modal';
+@import './components/modal-windows/authorization-modal';
+@import './components/modal-windows/modal-create-ad';
+@import './components/modal-windows/modal-edit-ad';
+
+// Components
+@import './components/header';
+@import './components/footer';
+@import './components/product-cards';
+@import './components/product-category';
+@import './components/one-card';
+@import './components/section';

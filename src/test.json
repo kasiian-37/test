@@ -1,0 +1,14 @@
+{
+  "categories": "РОЗПРОДАЖ",
+  "sectionTitle": "РОЗПРОДАЖ",
+  "productImgUrl": "./images/rectangle-7.jpg",
+  "productName": "Наименование карточки",
+  "productPriceSale": 100,
+  "productPriceGrn": "грн",
+  "cars": ["Chevy", "Цена грн"],
+  "favoriteBook": {
+    "title": "When the Fire Nation Attacked",
+    "author": "Nickelodeon",
+    "released": "02-21-2005"
+  }
+}
