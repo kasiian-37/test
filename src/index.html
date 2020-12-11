@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>project6-Olx</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <header class="header-container">
+    <div class="header__inner">
+      <div class="header__mobile-container">
+        <button class="search-button" data-search-open>
+          <svg class="icon" width="25" height="25">
+            <use href="./images/sprite.svg#icon-search_icon"></use>
+          </svg>
+        </button>
+
+        <a href="" class="logo">LOGO</a>
+
+        <button type="button" class="menu-button open" aria-label="Переключатель мобильного меню" aria-expanded="false"
+          data-menu-open>
+          <svg class="icon" width="24" height="24">
+            <use class="icon-menu" href="./images/sprite.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
+
+        <div class="user__button-container">
+          <!-- <div>
+              <button type="button"></button>
+              <button type="button"></button>
+            </div> -->
+          <button type="button" class="user__button authorization" data-modal-open>
+            <span class="button__text">Реєстрація / Увійти</span>
+            <svg class="icon__account" width="24" height="24">
+              <use class="" href="./images/sprite.svg#icon-user-profile"></use>
+            </svg>
+          </button>
+          <button data-create-ad-modal-open type="button" class="user__button advertisement">Створити оголошення!</button>
+        </div>
+      </div>
+
+      <div class="filter__container">
+        <div class="backdrop" data-backdrop>
+          <div class="mobile__menu-container is-open">
+
+            <button type="button" class="menu-button close" aria-label="Переключатель мобильного меню"
+              aria-expanded="false" data-menu-close>
+              <svg class="icon" width="24" height="24">
+                <use class="icon-cross" href="./images/sprite.svg#icon-close_icon"></use>
+              </svg>
+            </button>
+
+            <ul class="filter__inner">
+
+              <li class="user__button-mobile">
+                <button type="button" class="user__button mobile" data-modal-open>Реєстрація / Увійти</button>
+              </li>
+
+              <li class="filter__item">
+                <button class="filter__button">Нерухомість</button>
+              </li>
+
+              <li class="filter__item">
+                <button class="filter__button">Транспорт</button>
+              </li>
+
+              <li class="filter__item">
+                <button class="filter__button">Робота</button>
+              </li>
+
+              <li class="filter__item">
+                <button class="filter__button">Електроніка</button>
+              </li>
+
+              <li class="filter__item">
+                <button class="filter__button">Бізнес та послуги</button>
+              </li>
+
+              <li class="filter__item">
+                <button class="filter__button">Відпочинок і спорт</button>
+              </li>
+
+              <li class="filter__item">
+                <button class="filter__button">Віддам безкоштовно</button>
+              </li>
+
+              <li class="filter__item">
+                <button class="filter__button">Обмін</button>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <button class="filter__button-clear" type="reset">
+          Очистити фільтри
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+  <!--<include src="./partials/header.html"></include>-->
+
+  <main>
+    <!--<include src="./partials/section-1.html"></include>
+      <include src="./partials/section-2.html"></include>
+      <include src="./partials/section-3.html"></include>
+      <include src="./partials/footer.html"></include>-->
+
+    <section class="section">
+      <div class="main-container">
+
+        <!-- все что ниже, динамически тянется с бека -->
+        <div class="categories-group">
+          <!-- моя категория -->
+          <div class="categories">
+            <div class="categories-title">
+              <a class="icon-left arrow prev">
+                <svg class="icon-left-svg" width="30" height="30">
+                  <use href="./images/sprite.svg#icon-elem-left"></use>
+                </svg></a>
+              <h2 class="section-title">РОЗПРОДАЖ РІЗНЕ</h2>
+              <a class="section-text" href="">Дивитися всі</a>
+              <a class="icon-right arrow next">
+                <svg class="icon-right-svg" width="30" height="30">
+                  <use href="./images/sprite.svg#icon-elem-right"></use>
+                </svg></a>
+            </div>
+            <div class="gallery">
+            <ul class="product-card-group images">
+
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <div class="product-content-price">
+                    <p class="product-price-initial decorative-line">Цена</p>
+                    <p class="product-price-sale">Цена грн</p>
+                  </div>
+                </div>
+              </li>
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <div class="product-content-price">
+                    <p class="product-price-initial decorative-line">Цена</p>
+                    <p class="product-price-sale">Цена грн</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <div class="product-content-price">
+                    <p class="product-price-initial decorative-line">Цена</p>
+                    <p class="product-price-sale">Цена грн</p>
+                  </div>
+                </div>
+              </li>
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <div class="product-content-price">
+                    <p class="product-price-initial decorative-line">Цена</p>
+                    <p class="product-price-sale">Цена грн</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            </div>
+          </div>
+
+          <!-- НАСТЯ-->
+          <div class="categories">
+            <div class="categories-title">
+              <a class="icon-left">
+                <svg class="icon-left-svg" width="30" height="30">
+                  <use href="./images/sprite.svg#icon-elem-left"></use>
+                </svg></a>
+              <h2 class="section-title">РОЗПРОДАЖ РІЗНЕ</h2>
+              <a class="section-text" href=""><u>Дивитися всі</u></a>
+              <button class="button-right"><svg class="icon-elem-right" width="30" height="30">
+
+                  <use href="./images/sprite.svg#icon-elem-right"></use>
+                </svg></a>
+            </div>
+            <ul class="product-card-group">
+
+              <li class="product-card">
+                <a href="" class="product-image">
+
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                </a>
+
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+              <li class="product-card">
+                <a href="" class="product-image">
+
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+
+                </a>
+
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+
+              <li class="product-card">
+                <a href="" class="product-image">
+
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+              <li class="product-card">
+
+                <a href="" class="product-image">
+
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+            </ul>          
+            </div>
+
+          <!-- моя категория -->
+          <div class="categories">
+            <div class="categories-title">
+              <a class="icon-left">
+                <svg class="icon-left-svg" width="30" height="30">
+                  <use href="./images/sprite.svg#icon-elem-left"></use>
+                </svg></a>
+              <h2 class="section-title">РОЗПРОДАЖ РІЗНЕ</h2>
+              <a class="section-text" href=""><u>Дивитися всі</u></a>
+              <button class="button-right"><svg class="icon-elem-right" width="30" height="30">
+
+                  <use href="./images/sprite.svg#icon-elem-right"></use>
+                </svg></a>
+            </div>
+            <ul class="product-card-group">
+              <!-- <div class="product-card-one-group" > -->
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+              <!-- </div> -->
+              <!-- <div class="product-card-others-group" > -->
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+              <!-- </div> -->
+            </ul>
+          </div>
+
+          <!-- моя категория -->
+          <div class="categories">
+            <div class="categories-title">
+              <a class="icon-left">
+                <svg class="icon-left-svg" width="30" height="30">
+                  <use href="./images/sprite.svg#icon-elem-left"></use>
+                </svg></a>
+              <h2 class="section-title">РОЗПРОДАЖ РІЗНЕ</h2>
+              <a class="section-text" href=""><u>Дивитися всі</u></a>
+              <button class="button-right"><svg class="icon-elem-right" width="30" height="30">
+
+                  <use href="./images/sprite.svg#icon-elem-right"></use>
+                </svg></a>
+            </div>
+            <ul class="product-card-group">
+              <!-- <div class="product-card-one-group" > -->
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+              <!-- </div> -->
+              <!-- <div class="product-card-others-group" > -->
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+              <li class="product-card">
+                <div class="product-image">
+                  <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+                  <div class="product-overlay">
+                    <button class="product-card-icon product-card-icon-favorite">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-favorite-icon"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card-icon product-card-icon-fullscreen">
+                      <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-fullscreen-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h3 class="product-name">Наименование карточки</h3>
+                  <p class="product-price">Цена грн</p>
+                </div>
+              </li>
+              <!-- </div> -->
+            </ul>
+          </div>
+
+        </div>
+
+        <div>
+          <button class="button-next-pages">1</button>
+          <button class="button-next-pages">2</button>
+          <button class="button-next-pages">3</button>
+        </div>
+        <div data-create-ad-modal-open class="icon-add-position">
+          <a class="icon-add"><svg class="icon-add-svg" width="14" height="14">
+              <use href="./images/sprite.svg#icon-add-img"></use>
+            </svg></a></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-container">
+    <div class="footer-copyright">
+      <svg class="footer-copyright-svg" width="18" height="18">
+        <use href="./images/sprite.svg#icon-copyright"></use>
+      </svg>
+      <p class="footer-copyright-year">2019</p>
+    </div>
+    <p class="footer-copyright-text">All Rights Reserved</p>
+    <p>Developed with</p>
+    <svg class="footer-icon-love-icon" width="16" height="16">
+      <use href="./images/sprite.svg#icon-love-icon"></use>
+    </svg>
+
+    <p>by <u>GoIT Students</u></p>
+        
+  </footer>
+  ${require('./partials/footer.html')}
+
+  <!-- Модалка поиска -->
+  <div data-search-modal class="search__backdrop is-hidden">
+    <div class="search__modal">
+      <button data-search-close class="search__close-button" aria-label="Закрыть">
+        <svg class="close-icon" width="24" height="24">
+          <use class="icon-cross" href="./images/sprite.svg#icon-close_icon"></use>
+        </svg>
+      </button>
+      <form class="search-form" id="search-form">
+        <input class="search__input" type="text" name="query" autocomplete="off" placeholder="ПОШУК" />
+        <button class="search__submit" type="submit">
+          <svg class="icon" width="25" height="25">
+            <use href="./images/sprite.svg#icon-search_icon"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Модалка авторизации -->
+  <div class="modal-backdrop is-hidden" data-modal>
+    <div class="auth-modal">
+      <button class="auth-close-button" data-modal-close>
+        <svg class="auth-close-icon" width="24px" height="24px">
+          <use href="./images/sprite.svg#icon-close_icon"></use>
+        </svg>
+      </button>
+      <p class="auth-modal-title">Ви можете авторизуватися за допомогою Googlt Account:</p>
+      <button class="google-auth">
+        <svg class="google-auth-icon" width="18px" height="18px">
+          <use href="./images/sprite.svg#icon-google-icon"></use>
+        </svg>
+        <p class="google-auth-title">Google</p>
+      </button>
+      <h2 class="auth-modal-title">Або зайти за допомогою імейлу і пароля, попередньо зареєструвавшись:</h2>
+      <form method="post" class="auth-form">
+        <input type="email" name="email" class="auth-input email" id="userEmail" placeholder="E-mail">
+        <input type="password" name="password" class="auth-input password" id="userPassword" placeholder="Password">
+        <div class="auth-buttons">
+          <button type="submit" class="button-orange">Увійти</button>
+          <button type="submit" class="button-gray">Зареєструватись</button>
+        </div>
+
+  <!-- Модалка cоздания объявления -->
+  <div data-create-ad-modal class="backdrop-modal-create-ad is-hidden">
+    <div class="create-ad">
+      <span data-create-ad-modal-close class="close-form"><svg class="close-form-icon" width="14" height="14">
+          <use href="./images/sprite.svg#icon-close_icon"></use>
+        </svg></span>
+      <p class="create-ad-slogan">
+        Додати оголошення
+      </p>
+      <form class="create-ad-form">
+        <ul class="create-ad-form-list">
+          <li class="create-ad-form-item">
+            <label class="create-ad-form-label" for="name">Назва товару</label>
+            <input class="create-ad-form-input" type="text" name="name" id="name" placeholder=" " />
+          </li>
+          <li class="create-ad-form-item">
+            <label class="create-ad-form-label" for="photo">Фото</label>
+            <ul class="create-ad-photo-list">
+              <li class="create-ad-photo">
+                <a class="plus-photo">+</a>
+              </li>
+              <li class="create-ad-photo">
+                <a class="plus-photo">+</a>
+              </li>
+              <li class="create-ad-photo">
+                <a class="plus-photo">+</a>
+              </li>
+              <li class="create-ad-photo">
+                <a class="plus-photo">+</a>
+              </li>
+              <li class="create-ad-photo">
+                <a class="plus-photo">+</a>
+              </li>
+              <li class="create-ad-photo">
+                <a class="plus-photo">+</a>
+              </li>
+            </ul>
+          </li>
+          <li class="create-ad-form-item">
+            <label class="create-ad-form-label" for="description">Опис товару</label>
+            <textarea class="create-ad-form-input" name="description" id="description" cols="10" rows="3"
+              placeholder=" "></textarea>
+          </li>
+          <li class="create-ad-form-item">
+            <label class="create-ad-form-label" for="category">Категория товару</label>
+            <select class="create-ad-form-input">
+              <option></option>
+              <option>Нерухомість</option>
+              <option>Транспорт</option>
+              <option>Робота</option>
+              <option>Електроніка</option>
+              <option>Бізнес та послуги</option>
+              <option>Відпочинок та спорт</option>
+              <option>Віддам безкоштовно</option>
+              <option>Обмін</option>
+            </select>
+          </li>
+          <li class="create-ad-form-item">
+            <label class="create-ad-form-label" for="price">Ціна</label>
+            <input class="create-ad-form-input" type="text" name="price" id="price" placeholder="0.00 грн" />
+          </li>
+          <li class="create-ad-form-item">
+            <label class="create-ad-form-label" for="phone">Телефон</label>
+            <input class="create-ad-form-input" type="text" name="phone" id="phone" placeholder="+38 (0--) --- -- --" />
+          </li>
+        </ul>
+  
+        <button type="submit" class="create-ad-submit">
+          Додати
+        </button>
+
+      </form>
+    </div>
+  </div>
+  </body>
+ </html>
+
