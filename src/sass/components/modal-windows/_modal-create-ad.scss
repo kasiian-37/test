@@ -1,0 +1,199 @@
+.backdrop-modal-create-ad {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $modal-text;
+  overflow: auto;
+}
+
+.backdrop-modal-create-ad.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+// .visually-hidden {
+//   position: absolute;
+//   clip: rect(0 0 0 0);
+//   width: 1px;
+//   height: 1px;
+//   margin: -1px;
+//   border: 0;
+//   padding: 0;
+//   overflow: hidden;
+// }
+
+.create-ad {
+  position: relative;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: $white-text;
+
+  &-slogan {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  &-submit {
+    // display: flex;
+    // justify-content: center;
+    background-color: $accent-orange;
+    color: $white-text;
+
+    border: none;
+  }
+}
+.create-ad-photo {
+  background-color: $accent-grey;
+  margin: 5px;
+  padding: 18px 30px;
+
+  &-list {
+    padding: 0;
+    list-style: none;
+  }
+}
+.plus-photo {
+  color: $modal-text;
+}
+
+.create-ad-form {
+  padding: 0;
+
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+  &-item {
+    margin-bottom: 20px;
+  }
+  &-label {
+    margin-bottom: 10px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  &-input {
+    border-color: $modal-text;
+    border-width: 1px;
+    padding: 20px 0 20px 23px;
+  }
+}
+
+@media screen and (max-width: $before-tablet) {
+  .create-ad {
+    width: 290px;
+    padding: 60px 20px;
+  }
+  .create-ad-slogan {
+    margin-bottom: 20px;
+  }
+}
+@media screen and(min-width:$tablet) and (max-width: $before-desktop) {
+  .create-ad {
+    width: 724px;
+    padding: 60px 50px 55px 60px;
+  }
+  .create-ad-slogan {
+    margin-bottom: 30px;
+  }
+}
+@media screen and(min-width: $desktop) {
+  .create-ad {
+    width: 861px;
+    padding: 60px 105px 55px 105px;
+  }
+  .create-ad-slogan {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: $before-tablet) {
+  .create-ad-form-item {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: flex-start;
+  }
+  .create-ad-photo-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .create-ad-form-input {
+    width: 251px;
+  }
+}
+@media screen and (min-width: $tablet) and (max-width: $before-desktop) {
+  .create-ad-photo-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .create-ad-form-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .create-ad-form-input {
+    width: 458px;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .create-ad-photo-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .create-ad-form-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .create-ad-form-input {
+    width: 440px;
+  }
+}
+
+@media screen and(max-width: $before-tablet) {
+  .create-ad-submit {
+    height: 50px;
+    width: 250px;
+    margin: 0 0 60px;
+  }
+  .close-form {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+  }
+}
+@media screen and(min-width:$tablet) and (max-width: $before-desktop) {
+  .create-ad-submit {
+    height: 60px;
+    width: 266px;
+    margin: 21px 0 60px 148px;
+  }
+  .close-form {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+  }
+}
+@media screen and(min-width: $desktop) {
+  .create-ad-submit {
+    height: 60px;
+    width: 210px;
+    margin: 21px 0 60px 210px;
+  }
+  .close-form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+  }
+}
