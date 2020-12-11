@@ -7,5 +7,6 @@ import './js/main-section';
 import './js/modal';
 // console.log(mainSection);
 
-import './js/create-ad'
-
+import './js/create-ad';
+import './js/apiService';
+// import './js/registration';
